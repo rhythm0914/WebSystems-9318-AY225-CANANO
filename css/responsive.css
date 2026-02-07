@@ -1,0 +1,303 @@
+/* Responsive Design Extensions */
+
+/* Tablet Breakpoint (768px - 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-stats {
+        gap: 30px;
+    }
+    
+    .stat-item h3 {
+        font-size: 2.5rem;
+    }
+    
+    .officials-grid,
+    .vision-mission-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* Mobile Breakpoint (max-width: 767px) */
+@media (max-width: 767px) {
+    .header .container {
+        padding: 10px 15px;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.2rem;
+    }
+    
+    .logo-text p {
+        font-size: 0.8rem;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .hero-stats {
+        margin-top: 40px;
+        gap: 20px;
+    }
+    
+    .stat-item h3 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+    }
+    
+    .link-card,
+    .emergency-card,
+    .service-card,
+    .vm-card,
+    .official-card,
+    .fact-item {
+        padding: 20px;
+    }
+    
+    .announcement-card,
+    .department-card {
+        padding: 20px;
+    }
+    
+    .form-container {
+        padding: 20px;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .tab-btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .filter-btn,
+    .filter-option {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .links-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .emergency-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .announcements-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .departments-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .officials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .facts-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .fact-item {
+        padding: 15px;
+    }
+    
+    .fact-item h3 {
+        font-size: 0.9rem;
+    }
+    
+    .fact-item p {
+        font-size: 1.2rem;
+    }
+    
+    .search-filter,
+    .announcements-filter {
+        padding: 20px;
+    }
+    
+    .filter-buttons,
+    .filter-options {
+        justify-content: center;
+    }
+    
+    .tab-btn {
+        flex: 1;
+        min-width: 120px;
+        text-align: center;
+    }
+    
+    .services-tabs {
+        padding: 15px;
+    }
+    
+    .modal-content {
+        padding: 15px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .footer,
+    .theme-toggle,
+    .menu-toggle,
+    .hero-buttons,
+    .btn-service,
+    .form-actions {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .section {
+        padding: 20px 0;
+        page-break-inside: avoid;
+    }
+    
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .page-header {
+        padding: 30px 0;
+    }
+    
+    .page-header h1 {
+        font-size: 24pt;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #000080;
+        --secondary-color: #000033;
+        --accent-color: #ff4500;
+    }
+    
+    .btn-primary,
+    .navbar a.active {
+        border: 2px solid black;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Orientation Specific */
+@media (orientation: portrait) {
+    .hero-content {
+        padding: 0 10px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+    .hero {
+        padding: 40px 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .link-card:hover,
+    .announcement-card:hover,
+    .department-card:hover,
+    .service-card:hover,
+    .official-card:hover,
+    .emergency-card:hover {
+        transform: none;
+    }
+    
+    .navbar a {
+        padding: 12px 16px;
+    }
+    
+    .btn,
+    .btn-service,
+    .tab-btn,
+    .filter-btn,
+    .filter-option {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    input,
+    select,
+    textarea {
+        font-size: 16px; /* Prevents iOS zoom on focus */
+    }
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bacoor City - Official LGU Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/bacoorlogo.jpg" alt="Bacoor City Logo" class="logo">
+                <div class="logo-text">
+                    <h1>Bacoor City</h1>
+                    <p>Official Local Government Unit</p>
+                </div>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="departments.html"><i class="fas fa-building"></i> Departments</a></li>
+                    <li><a href="services.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                    <li><a href="announcements.html"><i class="fas fa-bullhorn"></i> Announcements</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welcome to Bacoor City</h2>
+                <p>A progressive city committed to excellence in governance and public service</p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="btn btn-primary">Online Services</a>
+                    <a href="announcements.html" class="btn btn-secondary">Latest Announcements</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>500K+</h3>
+                    <p>Residents</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Public Service</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Departments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="quick-links">
+        <div class="container">
+            <h2 class="section-title">Quick Access</h2>
+            <div class="links-grid">
+                <a href="services.html#business" class="link-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Business Permits</h3>
+                    <p>Apply for business permits and licenses</p>
+                </a>
+                <a href="announcements.html" class="link-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>City Events</h3>
+                    <p>Upcoming events and activities</p>
+                </a>
+                <a href="services.html#health" class="link-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Health Services</h3>
+                    <p>Medical and health programs</p>
+                </a>
+                <a href="contact.html" class="link-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Report Concern</h3>
+                    <p>Submit feedback or report issues</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Announcements Preview -->
+    <section class="announcements-preview">
+        <div class="container">
+            <h2 class="section-title">Latest Announcements</h2>
+            <div class="announcements-grid" id="latestAnnouncements">
+                <!-- Dynamic content from JS -->
+            </div>
+            <div class="text-center">
+                <a href="announcements.html" class="btn btn-outline">View All Announcements</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contacts -->
+    <section class="emergency">
+        <div class="container">
+            <h2 class="section-title">Emergency Contacts</h2>
+            <div class="emergency-grid">
+                <div class="emergency-card">
+                    <i class="fas fa-ambulance"></i>
+                    <h3>Emergency Hotline</h3>
+                    <p class="phone">911</p>
+                    <p>National Emergency Hotline</p>
+                </div>
+                <div class="emergency-card">
+                    <i class="fas fa-fire-extinguisher"></i>
+                    <h3>Bacoor Fire Station</h3>
+                    <p class="phone">(046) 434-1111</p>
+                    <p>Fire and Rescue Services</p>
+                </div>
+                <div class="emergency-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Police Station</h3>
+                    <p class="phone">(046) 434-2222</p>
+                    <p>Bacoor City Police</p>
+                </div>
+                <div class="emergency-card">
+                    <i class="fas fa-hospital"></i>
+                    <h3>City Health Office</h3>
+                    <p class="phone">(046) 434-3333</p>
+                    <p>Medical Emergencies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Bacoor City LGU</h3>
+                    <p>Official website of the Local Government Unit of Bacoor City, Cavite. Committed to transparent governance and excellent public service.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Bacoor</a></li>
+                        <li><a href="departments.html">City Departments</a></li>
+                        <li><a href="services.html">Online Services</a></li>
+                        <li><a href="announcements.html">Announcements</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> City Hall, Bacoor, Cavite</p>
+                    <p><i class="fas fa-phone"></i> (046) 434-0000</p>
+                    <p><i class="fas fa-envelope"></i> info@bacoorcity.gov.ph</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bacoor City Local Government Unit. All rights reserved.</p>
+                <p>@Ryan Joseph L. Cañano</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/storage.js"></script>
+    <script>
+        // Initialize theme
+        document.addEventListener('DOMContentLoaded', function() {
+            initTheme();
+            loadLatestAnnouncements();
+            
+            // Set active navigation
+            const currentPage = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.navbar a').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+        
+        function loadLatestAnnouncements() {
+            const container = document.getElementById('latestAnnouncements');
+            const announcements = [
+                {
+                    id: 1,
+                    title: "Citywide Clean-up Drive",
+                    date: "2024-01-15",
+                    category: "Event",
+                    excerpt: "Join us for the monthly clean-up drive in all barangays."
+                },
+                {
+                    id: 2,
+                    title: "Tax Payment Extension",
+                    date: "2024-01-12",
+                    category: "Advisory",
+                    excerpt: "Deadline for real property tax payment extended until Jan 31."
+                },
+                {
+                    id: 3,
+                    title: "New Health Center Opening",
+                    date: "2024-01-10",
+                    category: "News",
+                    excerpt: "New health center in Barangay Molino to open next week."
+                }
+            ];
+            
+            container.innerHTML = announcements.map(ann => `
+                <div class="announcement-card" onclick="openAnnouncementModal(${ann.id})">
+                    <span class="ann-category ${ann.category.toLowerCase()}">${ann.category}</span>
+                    <h3>${ann.title}</h3>
+                    <p>${ann.excerpt}</p>
+                    <div class="ann-meta">
+                        <span><i class="far fa-calendar"></i> ${ann.date}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function openAnnouncementModal(id) {
+            alert(`Announcement ${id} details would open in a modal. This functionality is fully implemented in announcements.html`);
+        }
+    </script>
+</body>
+</html>
