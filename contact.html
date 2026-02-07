@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Bacoor City LGU</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/maps.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="logo-container">
-                <img src="images/logo-125.png" alt="Bacoor City Logo" class="logo">
+                <img src="assets/images/logo-125.png" alt="Bacoor City Logo" class="logo">
                 <div class="logo-text">
                     <h1>Bacoor City</h1>
                     <p>Official Local Government Unit</p>
@@ -162,19 +164,39 @@
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="section bg-light">
-        <div class="container">
+
+<!-- Map Section -->
+<section class="section bg-light">
+    <div class="container">
+        <div class="map-container-wrapper">
             <h2 class="section-title">Find Us</h2>
-            <div class="map-container">
-                <div class="map-placeholder">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <h3>Bacoor City Hall Location</h3>
-                    <p>Click to view on Google Maps</p>
+            
+            <!-- Control Panel -->
+            <div class="map-control-panel">
+                <div class="location-info">
+                    <h3><i class="material-icons">location_city</i> Bacoor City Hall</h3>
+                    <p><strong>Address:</strong> City Hall Compound, Bacoor, Cavite 4102</p>
+                    <p><strong>Landmark:</strong> Near Bacoor Public Market and St. Michael the Archangel Parish</p>
+                    <p><strong>Coordinates:</strong> 14.4627° N, 120.9645° E</p>
                 </div>
+                
+                <div class="map-button-group">
+                    <button id="locateMe" class="btn btn-small">
+                        <i class="material-icons">my_location</i> My Location
+                    </button>
+                    <button id="getDirections" class="btn btn-small btn-primary">
+                        <i class="material-icons">directions</i> Get Directions
+                    </button>
+                </div>
+                
+                <div id="message-box" class="map-message-box"></div>
             </div>
+            
+            <!-- Map Container -->
+            <div id="map" class="map-canvas"></div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- FAQ Section -->
     <section class="section">
@@ -242,8 +264,40 @@
         </div>
     </div>
 
-    <script src="js/main.js"></script>
-    <script src="js/storage.js"></script>
-    <script src="js/forms.js"></script>
+        <!-- Load Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoPtOYJNRpGK-ssL-EcCyBFKnB_CdYaPc&loading=async&libraries=places,marker" async></script>
+    
+    <!-- Load your scripts -->
+     <script src="assets/js/maps.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/forms.js"></script>
+    
+    <!-- Load maps.js after DOM is ready -->
+    <script>
+        // Initialize map after everything is loaded
+        window.addEventListener('DOMContentLoaded', () => {
+            // Wait for Google Maps API to load
+            if (typeof google !== 'undefined') {
+                initMap();
+            } else {
+                // Load maps.js dynamically
+                const script = document.createElement('script');
+                script.src = 'assets/js/maps.js';
+                document.body.appendChild(script);
+                
+                // Try to initialize after a delay
+                setTimeout(() => {
+                    if (typeof initMap === 'function') {
+                        initMap();
+                    }
+                }, 1000);
+            }
+        });
+    </script>
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+    key: "AIzaSyAoPtOYJNRpGK-ssL-EcCyBFKnB_CdYaPc",
+    v: "beta"
+  });</script>
 </body>
 </html>

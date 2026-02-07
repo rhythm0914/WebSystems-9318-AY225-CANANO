@@ -1,0 +1,210 @@
+/* Maps.css - Fixed Version */
+
+/* Map Container */
+.map-container-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Control Panel */
+.map-control-panel {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+/* Location Info */
+.location-info h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #0056A8;
+}
+
+.location-info p {
+    margin: 8px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Button Group */
+.map-button-group {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.map-button-group .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 180px;
+}
+
+.map-button-group .btn-small {
+    padding: 10px 18px;
+    font-size: 0.95em;
+}
+
+.map-button-group .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Message Box */
+.map-message-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    min-height: 60px;
+    color: #333;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.map-message-box .route-info {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.map-message-box .route-info:last-child {
+    border-bottom: none;
+}
+
+.map-message-box .route-info h3 {
+    font-size: 1.1em;
+    color: #0056A8;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.map-message-box .route-info p {
+    margin: 5px 0;
+}
+
+/* Map Canvas */
+.map-canvas {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .map-container-wrapper {
+        gap: 15px;
+    }
+    
+    .map-control-panel {
+        padding: 20px;
+    }
+    
+    .map-button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .map-button-group .btn {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .map-canvas {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-canvas {
+        height: 350px;
+    }
+    
+    .location-info h3 {
+        font-size: 1.1em;
+    }
+    
+    .map-control-panel {
+        padding: 15px;
+    }
+}
+
+/* Loading State */
+.map-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: #f5f7fa;
+}
+
+.map-loading .spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #0056A8;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Dark Theme Support */
+body.dark-theme .map-control-panel {
+    background-color: #2d2d2d;
+    border-color: #444;
+}
+
+body.dark-theme .location-info h3 {
+    color: #4da6ff;
+}
+
+body.dark-theme .location-info p {
+    color: #cccccc;
+}
+
+body.dark-theme .map-message-box {
+    background-color: #3a3a3a;
+    border-color: #555;
+    color: #f0f0f0;
+}
+
+body.dark-theme .map-button-group .btn {
+    background-color: #444;
+    color: #f0f0f0;
+    border-color: #555;
+}
+
+body.dark-theme .map-button-group .btn-primary {
+    background-color: #0056A8;
+    border-color: #0056A8;
+}
+
+body.dark-theme .map-button-group .btn:hover {
+    background-color: #555;
+}
